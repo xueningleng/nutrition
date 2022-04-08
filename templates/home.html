@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="data:,">
+
+      <!-- jquery -->
+      <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans&family=Roboto+Slab&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/3b7457757f.js" crossorigin="anonymous"></script>
+
+      <title>Nutrition Guide</title>
+    </head>
+    <body>
+    <div class="home-bg-rect"></div>
+    <div class="home-img-container">
+        <img id='home-img' src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F23%2F2005%2F04%2F11%2Fbest-healthy-breakfast-tout-1.jpg" alt="healthy food img">
+    </div>
+    <div id="home-img-border"></div>
+    <div id="home-dot-line"> ------------------------------------------------- </div>
+
+    <div id="title">
+                HOW TO <br>
+        READ <span class="emphasis">NUTRITION LABELS</span><br>
+                & <br>
+        CHOOSE <span class="emphasis"> HEALTHY FOOD</span><br>
+            </div>
+    </body>
+    <a href="/overview">
+        <button id="start-btn" >Click to Start</button></a>
+</html>

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
+
+    <script>
+        let quiz = {{data|tojson}};
+    </script>
+
+<div class="section-title">
+    Quiz
+</div>
+<div class="quiz-header">
+    <div>QUESTION</div>
+    <div>#
+        {% for key, value in data.items() %}
+            {% if key == 'quiz_progress' %}
+                {{value}}
+            {% endif %}
+        {% endfor %}
+        /5</div>
+    <div>PROMPT</div>
+    <div>SCORE:
+        {% for key, value in data.items() %}
+            {% if key == 'quiz_score' %}
+                {{value}}
+            {% endif %}
+        {% endfor %}</div>
+</div>
+<div class="quiz-container" id="q-container">
+</div>
+<button class="reset-btn" >Reset</button>
+<button class="check-btn" disabled>Check Answer</button>
+{% endblock %}

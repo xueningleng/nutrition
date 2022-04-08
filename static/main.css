@@ -1,0 +1,282 @@
+:root {
+  --base: #5cb25d;
+  --accent: #826e5e;
+  --wrong: #ad5d50;
+  --textL: 'Abril Fatface', cursive;
+  --textS: 'Roboto Slab', serif;
+}
+body {
+  font-family: 'Roboto Slab', serif;
+  margin: 0;
+}
+
+#title{
+  display: block;
+  font-size: 36px;
+  font-family: var(--textL);
+  margin-top: 100px;
+  margin-left: 100px;
+  position: absolute;
+  color: var(--base);
+  z-index: 1000;
+}
+
+.emphasis{
+  color: var(--accent);
+}
+
+.home-bg-rect{
+  display:flex;
+  float: right;
+  margin-left: auto;
+  margin-right: 200px;
+  width:200px;
+  height: 100vh;
+  border:none;
+  background-color: var(--base);
+  z-index: 10;
+}
+
+.home-img-container{
+  display:flex;
+  float: right;
+  position: relative;
+  margin-top: 50px;
+  margin-right: -300px;
+  margin-left: auto;
+  width: 400px;
+  height: 400px;
+  z-index: 100;
+}
+
+#home-img-border{
+  display:flex;
+  float: right;
+  position: relative;
+  margin-top: 80px;
+  margin-right: -450px;
+  margin-left: auto;
+  width: 400px;
+  height: 400px;
+  z-index: 200;
+  border: 3px solid var(--accent);
+  border-radius: 10px;
+}
+
+#home-img{
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+#home-dot-line{
+  position: relative;
+  display:flex;
+  float: right;
+  margin-top: 400px;
+  font-size: 24px;
+  color: var(--base);
+}
+
+button{
+  padding: 5px 20px;
+  border-radius: 10px;
+  background-color: var(--base);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: var(--accent);
+}
+
+button:disabled{
+  background-color: darkgrey;
+}
+#start-btn{
+  position: relative;
+  display:flex;
+  float: right;
+  margin-top: 400px;
+}
+
+#start-btn:hover{
+}
+
+.navbar-brand{
+  color: beige;
+}
+.navbar {
+  background-color: var(--base);
+  color: var(--accent);
+  justify-content: flex-start;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  block-size: fit-content;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover{
+  color: var(--accent);
+}
+
+.subnav:hover .subnavbtn {
+  background-color: var(--accent);
+  color: var(--base);
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: var(--accent);
+  color: var(--base);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: lightgrey;
+  color: var(--accent);
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.section-title{
+  font-family: var(--textL);
+  font-size: 24px;
+  color: var(--base);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.quiz-header{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #826e5e;
+  box-shadow: 3px 3px lightgray;
+  color: white;
+}
+
+.quiz-container{
+  padding: 10px 20px;
+  align-content: center;
+}
+
+.choices{
+  min-height: 80px;
+}
+.drag-choice{
+  color: var(--accent);
+  margin: 8px;
+  cursor: move;
+  z-index: 100;
+  font-size: 16px;
+}
+
+.drop-box-title{
+  text-align: center;
+  color: var(--base);
+  font-size: 20px;
+  line-height: 50px;
+  width: 100%;
+  padding: 0px 10px;
+}
+
+.drop-box{
+  height: 160px;
+  background-color: beige;
+  color: var(--accent);
+  text-align: center;
+  line-height: 30px;
+  font-size: 16px;
+  border: 3px solid white;
+  z-index: 10;
+  padding: 5px 10px;
+}
+
+.ui-droppable-active {
+  background-color:beige;
+}
+
+.ui-droppable-hover{
+  background-color: var(--base);
+  color: beige;
+}
+
+.drop-fix{
+  line-height: 30px;
+  width: inherit;
+  margin-left: 10px;
+}
+
+.wrong-answer{
+  color: var(--wrong);
+  font-weight: bold;
+
+}
+.reset-btn{
+  display: flex;
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--wrong);
+  background-color: beige;
+}
+.check-btn {
+  display: flex;
+  float: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.next-btn{
+  display: flex;
+  float: right;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.result-text{
+  color: var(--base);
+  text-align: center;
+  font-weight: bold;
+}
+
