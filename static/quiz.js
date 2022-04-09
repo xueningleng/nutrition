@@ -293,7 +293,7 @@ function check_choice(q_info, selected){
     $(right_choice).addClass('correct-answer')
 
     if (selected == correct_choice) {
-        let result_text = $("<div class='result-text-mc correct-answer'> Excellent! Click next</div>")
+        let result_text = $("<div class='result-text-mc'> <span class='correct-answer'> Excellent! </span> &nbsp Click next</div>")
         $("#prompt-block").append(result_text)
     }
     else{
