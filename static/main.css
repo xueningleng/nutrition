@@ -202,12 +202,13 @@ button:disabled{
 .choices{
   min-height: 80px;
 }
+
 .drag-choice{
   color: var(--accent);
   margin: 8px;
   cursor: move;
   z-index: 100;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .drop-box-title{
@@ -225,7 +226,7 @@ button:disabled{
   color: var(--accent);
   text-align: center;
   line-height: 30px;
-  font-size: 16px;
+  font-size: 18px;
   border: 3px solid white;
   z-index: 10;
   padding: 5px 10px;
@@ -251,13 +252,11 @@ button:disabled{
 .wrong-answer{
   color: var(--wrong) !important;
   font-weight: bold;
-  margin: 0px 0px 8px 5px;
 }
 
 .correct-answer{
   color: var(--base) !important;
   font-weight: bold;
-  margin: 0px 0px 8px 5px;
 }
 
 .reset-btn{
@@ -305,7 +304,7 @@ button:disabled{
 
 .prompt-block{
   color: var(--accent);
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -324,7 +323,7 @@ button:disabled{
 }
 
 .question-block{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .choice-block{

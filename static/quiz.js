@@ -138,7 +138,7 @@ function end_template(q_score){
 }
 
 function drag_template(q_info){
-    let choice_block = $("<div class='row choices'>")
+    let choice_block = $("<div class='row choices' id='choices'>")
     choices = q_info['choices']
     for (let i = 0; i < choices.length; i++) {
         let choice = choices[i];
@@ -204,7 +204,7 @@ function display_drop(drop_block, wrong_answer){
     let cate = $(drop_block).attr('id')
     $(drop_block).empty()
     let drop_list = drop_lists[cate]
-    let wrong_str = ""
+
     for (let i=0; i<drop_list.length; i++){
         let item = drop_list[i]
 
@@ -213,16 +213,16 @@ function display_drop(drop_block, wrong_answer){
         if ($.inArray(item, wrong_answer)>=0){
             console.log(item, "is wrong")
             $(block).addClass('wrong-answer')
+            let wrong_str = ""
             wrong_str += "<span class=wrong-answer>["+item+"] </span> "
-            wrong_str += " should be in <span class='wrong-answer'> ["+correct_dict[item]+"]</span> <br>"
+            wrong_str += "&nbsp should be in &nbsp<span class='wrong-answer'> ["+correct_dict[item]+"]</span> <br>"
+            let result_text = $("<div class='result-text' > "+wrong_str+"</div>")
+            $("#choices").prepend(result_text)
         }
         $(block).attr('val',item)
         $(drop_block).append(block)
     }
-    if (wrong_str.length>0){
-        let result_text = $("<div class='result-text' > "+wrong_str+"</div>")
-        $("#q-container").prepend(result_text)
-    }
+
 
 }
 
@@ -243,13 +243,10 @@ function check_drag(q_info){
                 correct = false;
             }
         }
-
-
-
     })
     if (correct){
-        let result_text = $("<div class='result-text correct-answer'> Excellent! Click next</div>")
-        $("#q-container").prepend(result_text)
+        let result_text = $("<div class='result-text'> <span class='correct-answer'> Excellent! </span> &nbsp Click next</div>")
+        $("#choices").prepend(result_text)
     }
 }
 
