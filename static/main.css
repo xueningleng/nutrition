@@ -251,13 +251,11 @@ button:disabled{
 .wrong-answer{
   color: var(--wrong) !important;
   font-weight: bold;
-  margin: 0px 0px 8px 5px;
 }
 
 .correct-answer{
   color: var(--base) !important;
   font-weight: bold;
-  margin: 0px 0px 8px 5px;
 }
 
 .reset-btn{
@@ -324,7 +322,7 @@ button:disabled{
 }
 
 .question-block{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .choice-block{
