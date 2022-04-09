@@ -55,12 +55,14 @@ const questions = [
     {
         'question-type':"multiple-choice",
         'prompt':"Select the best answer",
-        'question':"Ricky has consumed 45 grams of unsaturated fats,"+
+        'question':"Ricky has consumed 45 grams of unsaturated fats, "+
             "213 grams of sugars, " +
             "40 grams of fibers, 80 grams of " +
             "protein. How much calories has Ricky " +
             "consumed?",
         'answers': [1737, 1576, 1720, 1832],
+        'correct':  1737,
+        'image': "http://justfunfacts.com/wp-content/uploads/2021/03/junk-food.jpg"
     },
     {
         'question-type':"multiple-choice",
@@ -75,13 +77,17 @@ const questions = [
             "After this meal, how many effective calories are" +
             " actually burnt from her workout?",
         'answers': [82, 95, 97, 100],
+        'correct': 95,
+        'image': "https://www.verywellfit.com/thmb/LOOS3DrPc3hC0ZaHMsd3GMfT-wI=/1500x1000/filters:fill(FFDB5D,1)/which-at-home-workout-options-are-right-for-you-5113667_static-4cfe40ec3ebe49a886353d25c4457886.png"
     },
     {
         'question-type':"multiple-choice",
         'prompt':"Select the best answer",
         'question': "Given this food label, what is the total\n" +
-            "calories in 2.5 servings?",
-        'answers':[1012.5, 1022.5, 409, 818]
+            "calories if Samantha ate two yogurts today as her dinner?",
+        'answers':[70, 85, 170, 340],
+        'correct': 340,
+        'image':"https://sites.google.com/a/g.coppellisd.com/nutrition-p7-c-gonzalez/_/rsrc/1348173855890/food-label/Yoplait_Original_Strawberry_Lemonade.jpg"
     }
 ]
 var correct = true;
@@ -92,6 +98,43 @@ var drop_lists = {
     'High Fat' : [],
     'Healthy' : [],
     'Unhealthy' : [],
+}
+
+const correct_dict = {
+    "Chicken": 'High Protein',
+    "Beef": 'High Protein',
+    "Fish": 'High Protein',
+    "Rice": 'High Carbs',
+    "Oats": 'High Carbs',
+    "Pork Belly": 'High Fat',
+
+    "Air-fried chicken strips": 'Healthy' ,
+    "Matcha Boba tea with 25% sweetness": 'Healthy' ,
+    "Strawberry smoothies": 'Healthy' ,
+    "Whole-grained protein bars": 'Healthy' ,
+
+    "Triple deep-fried pork belly": 'Unhealthy',
+    "French Fries": 'Unhealthy',
+    "Donuts": 'Unhealthy',
+
+}
+
+function end_template(q_score){
+    $('#quiz-section-title').remove();
+    $('#quiz-header').remove();
+    $('#reset-btn').remove();
+    $('#check-btn').remove();
+    $('#q-container').empty();
+    $('#q-container').append($("<div class='end-quiz-rect'>  "+q_score+" / 5 </div>"))
+    $('#q-container').append($("<div class='end-quiz-title'>"+"CONGRATULATIONS"+"</div>"))
+
+    let s = "You have graduated from<br>" +
+        'READING-FOOD-LABEL-&-MAKING-HEALTHY-CHOICES<br>' +
+        'University with honors!'
+    $('#q-container').append($("<div class='end-quiz-hint'>"+s+"</div>"))
+
+     let retake_btn = $("<button class='retake-btn'>Retake</button>")
+     $(retake_btn).appendTo($('#q-container'));
 }
 
 function drag_template(q_info){
@@ -161,6 +204,7 @@ function display_drop(drop_block, wrong_answer){
     let cate = $(drop_block).attr('id')
     $(drop_block).empty()
     let drop_list = drop_lists[cate]
+    let wrong_str = ""
     for (let i=0; i<drop_list.length; i++){
         let item = drop_list[i]
 
@@ -169,12 +213,17 @@ function display_drop(drop_block, wrong_answer){
         if ($.inArray(item, wrong_answer)>=0){
             console.log(item, "is wrong")
             $(block).addClass('wrong-answer')
-            let result_text = $("<div class='result-text wrong-answer'> "+item+" is in the wrong category "+"</div>")
-            $("#q-container").prepend(result_text)
+            wrong_str += "<span class=wrong-answer>["+item+"] </span> "
+            wrong_str += " should be in <span class='wrong-answer'> ["+correct_dict[item]+"]</span> <br>"
         }
         $(block).attr('val',item)
         $(drop_block).append(block)
     }
+    if (wrong_str.length>0){
+        let result_text = $("<div class='result-text' > "+wrong_str+"</div>")
+        $("#q-container").prepend(result_text)
+    }
+
 }
 
 function check_drag(q_info){
@@ -182,11 +231,9 @@ function check_drag(q_info){
     $.each(drop_lists, function(k,v){
         if (k in correct_answer){
             let wrong = []
-            let a = correct_answer[k]
             $.each(v, function(i, item){
-                if ($.inArray(item, a)<0){
-                    // wrong field
-                    console.log(item+" in the wrong field")
+                if (correct_dict[item] != k){
+                        // wrong field
                     wrong.push(item)
                 }
             })
@@ -198,29 +245,85 @@ function check_drag(q_info){
         }
 
 
+
     })
     if (correct){
-            let result_text = $("<div class='result-text'> Excellent! Click next</div>")
-            $("#q-container").prepend(result_text)
+        let result_text = $("<div class='result-text correct-answer'> Excellent! Click next</div>")
+        $("#q-container").prepend(result_text)
     }
 }
 
-function choice_template(){
+function choice_template(q_info){
+    let container = $("<div class=row>")
+
+    let image_block = $("<div class=col-md-5>")
+    $(image_block).addClass('image-container')
+    console.log(q_info['image'])
+    let img = $("<img id='question-img' src='"+q_info['image']+"' alt='question image'>")
+    $(img).appendTo(image_block)
+    $(image_block).appendTo(container)
+
+    let prompt_block = $("<div class=col-md-7 id='prompt-block'>")
+    $(prompt_block).addClass('prompt-block')
+    let question_block = $("<div class=question-block>"+q_info['question']+"</div>")
+    $(question_block).appendTo(prompt_block);
+
+    // prompt answers
+    let choice_block = $("<form id='choice-form' class=choice-block>")
+    // let form = $("<form id='choice-form'>")
+    let choices = q_info['answers']
+    for (let i=0; i<choices.length; i++){
+        let choice = choices[i]
+        let small_div = $("<div class='radio-wrap'>")
+        let new_input = $("<input class='radio-input' type='radio' name='q-choice' id='choice"+i+"' value='"+choice+"'>")
+        let new_label = $("<label class='radio-label' id='choice-"+choice+"' htmlFor='choice"+i+"'>"+choice+"</label>")
+        $(new_input).appendTo(small_div);
+        $(new_label).appendTo(small_div);
+
+        $(small_div).appendTo(choice_block);
+    }
+    // $(form).appendTo(choice_block);
+    $(choice_block).appendTo(prompt_block);
+
+    $(prompt_block).appendTo(container);
+    $(container).appendTo($("#q-container"))
 
 }
 
-function check_choice(q_info){
+function check_choice(q_info, selected){
+    let correct_choice = q_info['correct']
+    let right_choice= document.getElementById('choice-'+correct_choice)
+    $(right_choice).addClass('correct-answer')
 
+    if (selected == correct_choice) {
+        let result_text = $("<div class='result-text-mc correct-answer'> Excellent! Click next</div>")
+        $("#prompt-block").append(result_text)
+    }
+    else{
+        let result_text = $("<div class='result-text-mc wrong-answer'> "+"The correct answer is "+correct_choice+"</div>")
+        $("#prompt-block").append(result_text)
+        let wrong_choice = document.getElementById('choice-'+selected)
+        $(wrong_choice).addClass('wrong-answer')
+        correct = false
+    }
 }
+
 $(document).ready(function(){
     let q_num = quiz['quiz_progress']
     let q_info = questions[q_num-1]
-    if (q_info['question-type'] == 'drag-n-drop'){
-        drag_template(q_info)
+    if (q_num<=5){
+        if (q_info['question-type'] == 'drag-n-drop'){
+            drag_template(q_info)
+        }
+        else{
+            choice_template(q_info)
+        }
     }
     else{
-        choice_template(q_info)
+        let score = quiz['quiz_score']
+        end_template(score)
     }
+
 
     $(".check-btn").click(function() {
         if (q_info['question-type'] == 'drag-n-drop'){
@@ -228,16 +331,38 @@ $(document).ready(function(){
             $(this).remove()
             let next_btn = $("<button class='next-btn'>Next Question</button>")
             $(next_btn).appendTo($('#q-container'));
-
         }
         else{
-            check_choice(q_info)
+            let selected = $('input[name=q-choice]:checked', '#choice-form').val();
+            check_choice(q_info,selected)
+            $(this).remove()
+
+            let next_btn = $("<button class='next-btn'>Next Question</button>")
+            $(next_btn).appendTo($('#q-container'));
+
         }
     })
 
+    $(document).on('click', ".retake-btn", function(){
+        $.ajax({
+            type: "POST",
+            url: "/retake",
+            dataType : "json",
+            contentType: "application/json; charset=utf-8",
+            success: function(result){
+                setInterval('location.reload()', 500);
+            },
+            error: function(request, status, error){
+                console.log("Error");
+                console.log(request)
+                console.log(status)
+                console.log(error)
+            }
+        });
+    });
+
     $(document).on('click',".next-btn", function(){
-        console.log("next clicked")
-        console.log("correct?", correct)
+
         let data_to_save = {"result": correct}
         $.ajax({
             type: "POST",
@@ -260,8 +385,16 @@ $(document).ready(function(){
             }
         });
     });
-     $(document).on('click',".reset-btn", function(){
+    $(document).on('click',".reset-btn", function(){
          setInterval('location.reload()', 500);
-     })
+    })
 
+    $('#choice-form input').on('change', function() {
+        let selected = $('input[name=q-choice]:checked', '#choice-form').val();
+        console.log(selected)
+        if (selected){
+            let check_btn = document.getElementsByClassName('check-btn')
+            $(check_btn).prop('disabled', false);
+        }
+    });
 })

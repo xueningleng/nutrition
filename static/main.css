@@ -139,6 +139,7 @@ button:disabled{
 .subnav .subnavbtn {
   font-size: 16px;
   border: none;
+  border-radius: 0;
   outline: none;
   color: white;
   padding: 14px 16px;
@@ -240,16 +241,25 @@ button:disabled{
 }
 
 .drop-fix{
-  line-height: 30px;
+  line-height: 20px;
+  height: 20px;
   width: inherit;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 .wrong-answer{
-  color: var(--wrong);
+  color: var(--wrong) !important;
   font-weight: bold;
-
+  margin: 0px 0px 8px 5px;
 }
+
+.correct-answer{
+  color: var(--base) !important;
+  font-weight: bold;
+  margin: 0px 0px 8px 5px;
+}
+
 .reset-btn{
   display: flex;
   float: left;
@@ -259,6 +269,7 @@ button:disabled{
   color: var(--wrong);
   background-color: beige;
 }
+
 .check-btn {
   display: flex;
   float: right;
@@ -270,13 +281,107 @@ button:disabled{
 .next-btn{
   display: flex;
   float: right;
+  color: var(--base);
+  background-color: beige;
   margin-top: 10px;
   font-size: 16px;
 }
 
 .result-text{
-  color: var(--base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: var(--accent);
   text-align: center;
+  margin-top: 5px;
+}
+
+.result-text-mc{
+  color: var(--accent);
+  text-align: center;
+  margin-top: 5px;
+}
+
+.prompt-block{
+  color: var(--accent);
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.image-container{
+  display: block;
+  width: 100%;
+  padding: 0;
+}
+
+#question-img{
+  width: inherit;
+  object-fit: cover;
+}
+
+.question-block{
+  margin-top: 20px;
+}
+
+.choice-block{
+  justify-content: space-around;
+  margin-top: 20px;
+  display: flex;
+}
+
+.radio-wrap{
+  width: 75px;
+}
+.radio-input{
+  margin-left: 10px;
+  line-height: 30px;
+  margin-top: -1px;
+  vertical-align: middle;
+  height: 30px;
+}
+
+.radio-label{
+  margin-left: 5px;
+  line-height: 30px;
+}
+
+.end-quiz-rect{
+  display:flex;
+  float: right;
+  margin-top: -78px;
+  margin-left: auto;
+  margin-right: 100px;
+  width:300px;
+  height: 100%;
+  border:none;
+  background-color: var(--base);
+  z-index: 10;
+  color: white;
+  font-size: 48px;
+  justify-content: center;
+  line-height: 100vh;
+  font-family: var(--textL);
+}
+.end-quiz-title{
+  margin-top: 100px;
+  font-size: 32px;
+  color: var(--base);
+  font-family: var(--textL);
   font-weight: bold;
 }
 
+.end-quiz-hint{
+  margin-top: 20px;
+  font-size: 16px;
+  color: var(--accent);
+}
+
+.retake-btn{
+  margin-top: 50px;
+  color: var(--wrong);
+  background-color: beige;
+}

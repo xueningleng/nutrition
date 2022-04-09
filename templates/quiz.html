@@ -7,10 +7,10 @@
         let quiz = {{data|tojson}};
     </script>
 
-<div class="section-title">
+<div class="section-title" id="quiz-section-title">
     Quiz
 </div>
-<div class="quiz-header">
+<div class="quiz-header" id="quiz-header">
     <div>QUESTION</div>
     <div>#
         {% for key, value in data.items() %}
@@ -29,6 +29,6 @@
 </div>
 <div class="quiz-container" id="q-container">
 </div>
-<button class="reset-btn" >Reset</button>
-<button class="check-btn" disabled>Check Answer</button>
+<button class="reset-btn" id="reset-btn" >Reset</button>
+<button class="check-btn" id="check-btn" disabled>Check Answer</button>
 {% endblock %}
