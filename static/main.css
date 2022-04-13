@@ -317,6 +317,8 @@ button:disabled{
   display: block;
   width: 100%;
   padding: 0;
+  max-height: 300px;
+  overflow: hidden;
 }
 
 #question-img{

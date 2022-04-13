@@ -2,7 +2,6 @@
 {% block content %}
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 
-
     <script>
         let quiz = {{data|tojson}};
     </script>
@@ -18,7 +17,7 @@
                 {{value}}
             {% endif %}
         {% endfor %}
-        /5</div>
+        /7</div>
     <div>PROMPT</div>
     <div>SCORE:
         {% for key, value in data.items() %}

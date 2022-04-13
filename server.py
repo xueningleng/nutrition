@@ -60,6 +60,27 @@ quiz_questions = [
         }
     },
     {
+        'question-type': "multiple-choice",
+        'prompt': "Select the best answer",
+        'question': "Suppose that Jamie wants to consume 2500 calories today. " +
+                    "Jamie has already consumed 49 grams of protein, " +
+                    "214 grams of carbs, 40 grams of fats, and 6 cups of water. " +
+                    "How many more calories does Jamie need to fulfill Jamie's 2500-cal-goal?",
+        'answers': [1023, 1076, 696, 1088],
+        'correct': 1088,
+        'image': "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2018_18/2084256/170725-better-cheat-day-hamburger-se-540p.jpg"
+    },
+    {
+        'question-type': "multiple-choice",
+        'prompt': "Select the best answer",
+        'question': "Given this food label, suppose that James ate 3.5 servings of this, "+
+                    "what percentage of daily calories did James consumed "+
+                    "if his daily recommended intake was 2000?",
+        'answers': [0.365, 0.37, 0.34, 0.35],
+        'correct': 0.35,
+        'image': "https://images.squarespace-cdn.com/content/v1/5a61286cf6576e69273c7f7f/1518546346849-3IJ4FT7IQVKLIT494QRD/nutrition+label.png"
+    },
+    {
         'question-type':"multiple-choice",
         'prompt':"Select the best answer",
         'question':"Ricky has consumed 45 grams of unsaturated fats, "+

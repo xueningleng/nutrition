@@ -32,7 +32,7 @@ function end_template(q_score){
     $('#reset-btn').remove();
     $('#check-btn').remove();
     $('#q-container').empty();
-    $('#q-container').append($("<div class='end-quiz-rect'>  "+q_score+" / 5 </div>"))
+    $('#q-container').append($("<div class='end-quiz-rect'>  "+q_score+" / 7 </div>"))
     $('#q-container').append($("<div class='end-quiz-title'>"+"CONGRATULATIONS"+"</div>"))
 
     let s = "You have graduated from<br>" +
@@ -216,7 +216,7 @@ $(document).ready(function(){
     let q_num = quiz['quiz_progress']
     let questions = quiz['quiz_questions']
     let q_info = questions[q_num-1]
-    if (q_num<=5){
+    if (q_num<=7){
         if (q_info['question-type'] == 'drag-n-drop'){
             drag_template(q_info)
         }
