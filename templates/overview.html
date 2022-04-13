@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
+<link rel="stylesheet" href="{{url_for('static', filename='nutrition_facts.css')}}">
 <div class="section-title">
     Overview
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img class="nutrition-image" src="https://s.cdpn.io/3/NutritionFacts.gif">
+        </div>
+    </div>
 </div>
 {% endblock %}
