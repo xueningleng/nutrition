@@ -388,3 +388,7 @@ button:disabled{
   color: var(--wrong);
   background-color: beige;
 }
+
+#description-text{
+  display: inline-block;
+}
