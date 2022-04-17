@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
+import json
 app = Flask(__name__)
 # DATA
 quiz_progress = 1
@@ -118,6 +119,8 @@ quiz_questions = [
         'image':"https://sites.google.com/a/g.coppellisd.com/nutrition-p7-c-gonzalez/_/rsrc/1348173855890/food-label/Yoplait_Original_Strawberry_Lemonade.jpg"
     }
 ]
+
+
 # ROUTES
 
 @app.route('/')
@@ -158,8 +161,15 @@ def retake():
     quiz_progress = 1
     return jsonify(data={'quiz_progress':quiz_progress, 'quiz_score':quiz_score})
 
+@app.route('/snacks', methods=['GET', 'POST'])
+def snack():
+    return render_template('snacks.html')
 
-
+@app.route('/snacks/<snack_type>', methods=['GET', 'POST'])
+def snack_info(snack_type):
+    f = open('snack_data.json')
+    snack_data = json.load(f)
+    return render_template('snack_details.html', data=snack_data[snack_type])
 
 if __name__ == '__main__':
     app.run(debug = True)

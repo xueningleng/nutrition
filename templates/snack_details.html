@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block content %}
+    <script>
+        let j = {{data|tojson}};
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    Header: {{data['header']}}
+                </div>
+                <div>
+                    <img src="{{data['image_link']}}" class="image-container">
+                </div>
+                <div>
+                        Description
+                    {% for p in data["descriptions"] -%}
+                    <ul>
+                        {{p |safe}}
+                    </ul>
+                    {%- endfor %}
+                </div>
+                <div>
+                    Examples:
+                    {% for p in data["hover_examples"] -%}
+                    <a> {{p |safe}} </a>
+                    {%- endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

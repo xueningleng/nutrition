@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'snacks.js') }}"></script>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div> 
+                <a> Choose </a>
+            </div> 
+            <div> 
+                <a href="/snacks/vegetable"> Vegetable based snacks </a>
+            </div> 
+            <div> 
+                <a href="/snacks/fruit"> Fruit based snacks </a>
+            </div> 
+            <div> 
+                <a href="/snacks/protein"> High protein / Fiber based snacks </a>
+            </div> 
+        </div>
+        <div class="col-md-6">
+            <img src="https://static.toiimg.com/photo/70295010.cms" class="image-container">
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1">
+            <button id="reset-btn" >Prev</button>
+        </div>
+        
+        <div class="col-md-10">
+        </div>
+        <div class="col-md-1">
+            <button id="reset-btn"> Next </button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
