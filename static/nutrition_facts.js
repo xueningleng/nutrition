@@ -23,7 +23,7 @@ $(document).ready(function(){
     let j = label_data
     var map_areas = ['#daily-value-rec', "#calories-rec", "#serving-info-rec", "#nutrients1-rec", "#nutrients2-rec"];
     $('#daily-value-rec').mouseout(function(){
-        $('#description-text').html( ('<div id="description-text">  Hover over something to learn about it  </div>') );
+        $('#description-text').html( ('<div id="description-text"></div>') );
     })
     $('#daily-value-rec').mouseover(function(){
         var s = '<div id="description-text">' + j["4"]["descriptions"] + '</div>'
@@ -32,7 +32,7 @@ $(document).ready(function(){
     })
 
     $('#calories-rec').mouseout(function(){
-        $('#description-text').html( ('<div id="description-text">  Hover over something to learn about it  </div>') );
+        $('#description-text').html( ('<div id="description-text"></div>') );
     })
     $('#calories-rec').mouseover(function(){
         var s = '<div id="description-text">' + j["2"]["descriptions"] + '</div>'
@@ -40,7 +40,7 @@ $(document).ready(function(){
     })
 
     $('#serving-info-rec').mouseout(function(){
-        $('#description-text').html( ('<div id="description-text">  Hover over something to learn about it  </div>') );
+        $('#description-text').html( ('<div id="description-text"></div>') );
     })
     $('#serving-info-rec').mouseover(function(){
         var s = '<div id="description-text">' +  j["1"]["descriptions"] + '</div>'
@@ -48,7 +48,7 @@ $(document).ready(function(){
     })
     
     $('#nutrients1-rec').mouseout(function(){
-        $('#description-text').html( ('<div id="description-text">  Hover over something to learn about it  </div>') );
+        $('#description-text').html( ('<div id="description-text"></div>') );
     })
     $('#nutrients1-rec').mouseover(function(){
         var s = '<div id="description-text">' +  j["3"]["descriptions"] + '</div>'
@@ -56,7 +56,7 @@ $(document).ready(function(){
     })
 
     $('#nutrients2-rec').mouseout(function(){
-        $('#description-text').html( ('<div id="description-text">  Hover over something to learn about it  </div>') );
+        $('#description-text').html( ('<div id="description-text"></div>') );
     })
     $('#nutrients2-rec').mouseover(function(){
         var s = '<div id="description-text">' +  j["3"]["descriptions"] + '</div>'
