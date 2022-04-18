@@ -8,3 +8,12 @@
     background-color:yellow;
 }  
 
+#hover-text {
+  font-size: xx-large;
+  font-weight: bolder;
+}
+
+#description-text {
+  color: gray;
+  margin-top: 5%;
+}
