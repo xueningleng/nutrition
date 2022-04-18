@@ -130,7 +130,9 @@ def home():
 
 @app.route('/overview')
 def overview():
-   return render_template('overview.html')
+    f = open('label_data.json')
+    label_data = json.load(f)
+    return render_template('overview.html', data=label_data)
 
 @app.route('/quiz')
 def quiz():
