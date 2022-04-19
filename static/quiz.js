@@ -172,6 +172,11 @@ function choice_template(q_info){
     let question_block = $("<div class=question-block>"+q_info['question']+"</div>")
     $(question_block).appendTo(prompt_block);
 
+    // hint block
+    if("hints" in q_info) {
+        let hint_block = $("<div class=hint-block>View Hint</div>")
+        $(hint_block).appendTo(prompt_block);
+    }
     // prompt answers
     let choice_block = $("<form id='choice-form' class=choice-block>")
     // let form = $("<form id='choice-form'>")
@@ -188,7 +193,6 @@ function choice_template(q_info){
     }
     // $(form).appendTo(choice_block);
     $(choice_block).appendTo(prompt_block);
-
     $(prompt_block).appendTo(container);
     $(container).appendTo($("#q-container"))
 
@@ -248,6 +252,10 @@ $(document).ready(function(){
         }
     })
 
+    $(document).on('click', ".hint-block", function(){
+        let d = $("<div id='dialog'>"+q_info['hints']+"</div>")
+        $(d).dialog();
+    })
     $(document).on('click', ".retake-btn", function(){
         $.ajax({
             type: "POST",

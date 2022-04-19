@@ -352,6 +352,17 @@ button:disabled{
   line-height: 30px;
 }
 
+.hint-block{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 14px;
+  margin-top: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--base);
+
+}
+
 .end-quiz-rect{
   display:flex;
   float: right;

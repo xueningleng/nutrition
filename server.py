@@ -124,7 +124,7 @@ quiz_questions = [
             "calories if Samantha ate two yogurts today as her dinner?",
         'answers':[70, 85, 170, 340],
         'correct': 340,
-        'image':"https://sites.google.com/a/g.coppellisd.com/nutrition-p7-c-gonzalez/_/rsrc/1348173855890/food-label/Yoplait_Original_Strawberry_Lemonade.jpg"
+        'image':"https://sites.google.com/a/g.coppellisd.com/nutrition-p7-c-gonzalez/_/rsrc/1348173855890/food-label/Yoplait_Original_Strawberry_Lemonade.jpg",
     }
 ]
 
