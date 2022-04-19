@@ -70,7 +70,8 @@ quiz_questions = [
         'answers': [1023, 1076, 696, 1088],
         'correct': 1088,
         # 'image': "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1240w,f_auto,q_auto:best/newscms/2018_18/2084256/170725-better-cheat-day-hamburger-se-540p.jpg"
-        'image': "https://i.ytimg.com/vi/GB1nq2R6OKM/maxresdefault.jpg"
+        'image': "https://i.ytimg.com/vi/GB1nq2R6OKM/maxresdefault.jpg",
+        'hints': "1g protein = 1g carb = 4 cals, 1g fat = 9 cals"
     },
     {
         'question-type': "multiple-choice",
@@ -80,7 +81,8 @@ quiz_questions = [
                     "if his daily recommended intake was 2000?",
         'answers': [0.365, 0.37, 0.34, 0.35],
         'correct': 0.35,
-        'image': "https://images.squarespace-cdn.com/content/v1/5a61286cf6576e69273c7f7f/1518546346849-3IJ4FT7IQVKLIT494QRD/nutrition+label.png"
+        'image': "https://images.squarespace-cdn.com/content/v1/5a61286cf6576e69273c7f7f/1518546346849-3IJ4FT7IQVKLIT494QRD/nutrition+label.png",
+        'hints': "1g protein = 1g carb = 4 cals, 1g fat = 9 cals"
     },
     {
         'question-type':"multiple-choice",
@@ -93,7 +95,9 @@ quiz_questions = [
         'answers': [1737, 1576, 1720, 1832],
         'correct':  1737,
         # 'image': "http://justfunfacts.com/wp-content/uploads/2021/03/junk-food.jpg"
-        'image': "https://i.ytimg.com/vi/EPI5cuq3NPU/maxresdefault.jpg"
+        'image': "https://i.ytimg.com/vi/EPI5cuq3NPU/maxresdefault.jpg",
+        'hints': "1g protein = 1g carb = 4 cals, 1g fat = 9 cals"
+
     },
     {
         'question-type':"multiple-choice",
@@ -110,7 +114,8 @@ quiz_questions = [
         'answers': [82, 95, 97, 100],
         'correct': 95,
         # 'image': "https://www.verywellfit.com/thmb/LOOS3DrPc3hC0ZaHMsd3GMfT-wI=/1500x1000/filters:fill(FFDB5D,1)/which-at-home-workout-options-are-right-for-you-5113667_static-4cfe40ec3ebe49a886353d25c4457886.png"
-        'image': "https://static.onecms.io/wp-content/uploads/sites/35/2021/09/27/squat-GettyImages-1004449544-2000.jpg"
+        'image': "https://static.onecms.io/wp-content/uploads/sites/35/2021/09/27/squat-GettyImages-1004449544-2000.jpg",
+        'hints': "1g protein = 1g carb = 4 cals, 1g fat = 9 cals"
     },
     {
         'question-type':"multiple-choice",
