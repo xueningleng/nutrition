@@ -9,11 +9,15 @@
 }  
 
 #hover-text {
-  font-size: xx-large;
+  font-size: x-large;
   font-weight: bolder;
 }
 
 #description-text {
   color: gray;
   margin-top: 5%;
+}
+
+#nutrition-img-div {
+  height: fit-content;
 }
