@@ -220,15 +220,18 @@ def retake():
     quiz_progress = 1
     return jsonify(data={'quiz_progress':quiz_progress, 'quiz_score':quiz_score})
 
-@app.route('/snacks', methods=['GET', 'POST'])
-def snack():
-    return render_template('snacks.html')
 
-@app.route('/snacks/<snack_type>', methods=['GET', 'POST'])
-def snack_info(snack_type):
+@app.route('/snacks/<snack_id>', methods=['GET', 'POST'])
+def snack_info(snack_id):
     f = open('snack_data.json')
+    prev_ind = int(snack_id) - 1
+    if snack_id == 0:
+        prev_ind = 0
+    next_ind = int(snack_id) + 1
+    if next_ind > 3:
+        next_ind = 3
     snack_data = json.load(f)
-    return render_template('snack_details.html', data=snack_data[snack_type])
+    return render_template('snacks.html', data=snack_data[snack_id], prev_link="/"+str(prev_ind), next_link="/"+str(next_ind))
 
 if __name__ == '__main__':
     app.run(debug = True)

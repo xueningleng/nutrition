@@ -403,3 +403,21 @@ button:disabled{
 #description-text{
   display: inline-block;
 }
+
+#choose-text{
+  font-weight: 800;
+  font-size: 28px;
+}
+
+#header-snack-text{
+  color: darkgreen;
+  font-weight: 800;
+  font-size: 24px;
+  padding-bottom: 20px;
+}
+
+#snack-description-text{
+  color: darkolivegreen;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
