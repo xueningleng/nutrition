@@ -406,7 +406,7 @@ button:disabled{
 
 #choose-text{
   font-weight: 800;
-  font-size: 28px;
+  font-size: 32px;
 }
 
 #header-snack-text{
@@ -420,4 +420,8 @@ button:disabled{
   color: darkolivegreen;
   font-size: 18px;
   padding-bottom: 20px;
+}
+
+#snack-images{
+  padding-top: 30px;
 }
