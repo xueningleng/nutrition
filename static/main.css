@@ -183,6 +183,7 @@ button:disabled{
 
 .quiz-header{
   margin-top: 10px;
+  height: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -194,7 +195,15 @@ button:disabled{
   color: white;
 }
 
+.score-display{
+  font-weight: bold;
+  color: beige;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .quiz-container{
+  margin-top: 20px;
   padding: 10px 20px;
   align-content: center;
 }
@@ -204,11 +213,17 @@ button:disabled{
 }
 
 .drag-choice{
-  color: var(--accent);
+  background-color: var(--accent);
   margin: 8px;
   cursor: move;
   z-index: 100;
   font-size: 18px;
+  color: white;
+  height: 40px;
+  padding: 0px 10px;
+  line-height: 40px;
+  border-radius: 10px;
+  box-shadow: 3px 3px lightgray;
 }
 
 .drop-box-title{
@@ -242,11 +257,17 @@ button:disabled{
 }
 
 .drop-fix{
-  line-height: 20px;
-  height: 20px;
+  line-height: 30px;
+  height: 30px;
   width: inherit;
-  margin-left: 10px;
-  margin-right: 10px;
+  background-color: darkgrey;
+  margin: 8px;
+  cursor: move;
+  z-index: 100;
+  font-size: 16px;
+  color: whitesmoke;
+  padding: 0px 10px;
+  border-radius: 10px;
 }
 
 .wrong-answer{
@@ -380,8 +401,9 @@ button:disabled{
   line-height: 100vh;
   font-family: var(--textL);
 }
+
 .end-quiz-title{
-  margin-top: 100px;
+  margin-top: 150px;
   font-size: 32px;
   color: var(--base);
   font-family: var(--textL);
@@ -389,15 +411,19 @@ button:disabled{
 }
 
 .end-quiz-hint{
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 16px;
   color: var(--accent);
 }
 
 .retake-btn{
   margin-top: 50px;
-  color: var(--wrong);
-  background-color: beige;
+  background-color: var(--base);
+  color: white;
+}
+.retake-btn:hover{
+  background-color: lightgrey;
+  color: var(--base);
 }
 
 #description-text{

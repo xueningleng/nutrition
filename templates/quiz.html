@@ -10,21 +10,29 @@
     Quiz
 </div>
 <div class="quiz-header" id="quiz-header">
-    <div>QUESTION</div>
-    <div>#
+    <div>QUESTION #
         {% for key, value in data.items() %}
             {% if key == 'quiz_progress' %}
                 {{value}}
             {% endif %}
         {% endfor %}
         / 7</div>
-    <div>PROMPT</div>
-    <div>SCORE:
-        {% for key, value in data.items() %}
-            {% if key == 'quiz_score' %}
-                {{value}}
+    <div>{% for key, value in data.items() %}
+            {% if key == 'quiz_progress' %}
+                {% if value <= 2 %}
+                    Drag each element to the correct box
+                {% else %}
+                    Select the correct answer
+                {% endif %}
             {% endif %}
-        {% endfor %}
+        {% endfor %}</div>
+    <div>SCORE:
+        <span class="score-display">
+            {% for key, value in data.items() %}
+                {% if key == 'quiz_score' %}
+                    {{value}}
+                {% endif %}
+            {% endfor %}</span>
         / 7</div>
 </div>
 <div class="quiz-container" id="q-container">
