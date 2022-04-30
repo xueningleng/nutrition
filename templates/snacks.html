@@ -6,13 +6,10 @@
 </script>
 <div class="container">
     <div class="row">
-        <div class="col-md-6">
-            <div class="col-md-9">
-                <div> 
-                    <span id="choose-text"> Choose </span>
-                </div> 
+        <div class="col-md-6 col-sm-6">
+            <div class="col-md-10 col-sm-10">
                 <div id="header-snack-text">
-                    {{data['header']}}
+                    <span id="choose-text"> Choose </span> {{data['header']}}
                 </div>
                 <div>
                     {% for p in data["descriptions"] -%}
@@ -29,21 +26,21 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6">
             <img src="{{data['image_link']}}" id="snack-images" class="image-container">
         </div>
     </div>
     <br>
     <div class="row">
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-1">
             <form action= "/snacks{{prev_link}}">
                 <button id="reset-btn" >Prev</button>
             </form>
         </div>
         
-        <div class="col-md-10">
+        <div class="col-md-10 col-sm-10">
         </div>
-        <div class="col-md-1">
+        <div class="col-md-1 col-sm-1">
             <form action= "/snacks/{{next_link}}">
                 <button id="reset-btn"> Next </button>
             </form>

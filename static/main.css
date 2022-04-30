@@ -431,19 +431,18 @@ button:disabled{
 }
 
 #choose-text{
-  font-weight: 800;
-  font-size: 32px;
+  color: var(--accent);
 }
 
 #header-snack-text{
-  color: darkgreen;
-  font-weight: 800;
+  color: var(--base);
+  font-family: var(--textL);
   font-size: 24px;
   padding-bottom: 20px;
 }
 
 #snack-description-text{
-  color: darkolivegreen;
+  color: var(--base);
   font-size: 18px;
   padding-bottom: 20px;
 }
