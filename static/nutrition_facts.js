@@ -23,7 +23,11 @@ var label_data = {
     }
 }
 $(document).ready(function(){
-    $('.map').maphilight();
+    $('.map').maphilight({
+        fillColor: 'fff9c2',
+        fillOpacity: 0.5,
+        strokeColor: '5cb25d',
+    });
     $('.map').css('background-color','yellow')
     
     let j = label_data
