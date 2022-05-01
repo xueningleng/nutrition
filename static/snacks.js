@@ -25,7 +25,7 @@ imgs_and_labels = {
         }
     },
     "High-Fiber Snacks": {
-        "oats_with_protein_powder": {
+        "oats with protein powder": {
             "image": "https://skinnyfitalicious.com/wp-content/uploads/2017/12/protein-oatmeal-img3.jpg",
             "label": "https://cdn.shopify.com/s/files/1/0052/6657/1334/files/Banana.png?v=1602691258"
         },
@@ -38,7 +38,7 @@ imgs_and_labels = {
             "label": "https://chocolatecoveredkatie.com/wp-content/uploads/2016/02/image-1.png"
         },
         "protein bar": {
-            "   ": "https://m.media-amazon.com/images/I/71A7mTrAaRS._SL1500_.jpg",
+            "image": "https://m.media-amazon.com/images/I/71A7mTrAaRS._SL1500_.jpg",
             "label": "https://proteinpowder.com/wp-content/uploads/2019/02/PureBarChocPeaButt.png"
         }
     }
@@ -78,15 +78,21 @@ $(document).ready(function(){
                 var img_link = imgs_and_labels[j["header"]][s]["image"]
                 var label_link = imgs_and_labels[j["header"]][s]["label"]
                 console.log(img_link)
-                $('.snack-image').html('<img src="' + img_link + '" id="snack-images" class="image-container">');
-                $('.nutrition-label').html('<img src="' + label_link + '" id="snack-images" class="image-container">');
+                $('#snack-image').empty()
+                let ex_img = $("<div class=col-md-6 example-image>")
+                $(ex_img).html('<img src="' + img_link + '" id="example-image" class="snack-image-container" alt="Example Snack Image">');
+                let nut_lab = $("<div class=\"col-md-6 nutrition-label\">")
+                $(nut_lab).html('<img src="' + label_link + '" id="nutrition-label" class="snack-image-container" alt="Label for Example Snack Image">');
+                $(ex_img).appendTo($('#snack-image'))
+                $(nut_lab).appendTo($('#snack-image'))
 
             }, function() {
-              $( this ).removeClass( "hover" );
-              var img_link = j['image_link']
-              var label_link = j['image_link']
-              $('.snack-image').html( ('<img src="' + img_link + '" id="snack-images" class="image-container">') );
-              $('.nutrition-label').html('<img src="' + label_link + '" id="snack-images" class="image-container">');
+                $( this ).removeClass( "hover" );
+                var img_link = j['image_link']
+              // var label_link = j['image_link']
+                $('#snack-image').empty()
+                $('#snack-image').html( ('<img src="' + img_link + '" class="snack-image-container" alt="Snack Type Image">') );
+              // $('.nutrition-label').html('<img src="' + label_link + '" id="nutrition-label" class="image-container">');
             }
         );
     })

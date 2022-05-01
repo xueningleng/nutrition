@@ -175,7 +175,7 @@ button:disabled{
 
 .section-title{
   font-family: var(--textL);
-  font-size: 24px;
+  font-size: 28px;
   color: var(--base);
   margin-top: 10px;
   margin-left: 10px;
@@ -432,6 +432,7 @@ button:disabled{
 
 #choose-text{
   color: var(--accent);
+  margin-right: 20px;
 }
 
 #header-snack-text{
@@ -443,17 +444,30 @@ button:disabled{
 }
 
 #snack-description-text{
-  color: var(--base);
+  color: var(--accent);
   font-size: 18px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
-#snack-images{
+#snack-image{
   padding-top: 30px;
 }
 
+#example-image{
+  padding-top: 30px;
+}
+
+#nutrition-label{
+  padding-top: 30px;
+}
+.hover-examples{
+  font-size: 16px;
+}
 .hover-snacks{
-  text-decoration: underline;
+  color: var(--base) !important;
+  text-decoration: underline !important;
+  cursor: pointer;
+  margin-right: 5px;
 }
 
 .disappear {
@@ -461,21 +475,32 @@ button:disabled{
 }
 
 .snack-headers {
-  font-size: 24px;
+  font-size: 20px;
   padding-bottom: 20px;
   text-decoration: underline;
   font-family: var(--textS);
+  color: var(--accent);
 }
 
 .snack-link{
-  color: var(--base)
+  color: var(--accent);
 }
 
+.snack-link:hover{
+  color: darkgrey;
+}
 .hover-to-see{
-  color: hotpink;
+  color: darkgrey;
   font-family: var(--textS);
-  font-size: 12px;
+  font-style: italic;
   padding-top: 20px;
-  padding-bottom: 20px;
-  font-weight: 100;
+  padding-bottom: 10px;
+}
+
+.snack-image-container{
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
