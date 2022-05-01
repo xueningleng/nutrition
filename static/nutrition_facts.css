@@ -1,23 +1,35 @@
+:root {
+  --base: #5cb25d;
+  --accent: #826e5e;
+  --wrong: #ad5d50;
+  --textL: 'Abril Fatface', cursive;
+  --textS: 'Roboto Slab', serif;
+}
+
 .nutrition-image {
     width: 100%;
-    margin: 20px;
+    margin: 120px;
+    background-color: white;
   }
 
-.hover
-{
-    background-color:yellow;
-}  
-
 #hover-text {
-  font-size: x-large;
-  font-weight: bolder;
+    font-size: 20px;
+    font-weight: bold;
+    font-style:italic;
+    color: darkgrey;
 }
 
 #description-text {
-  color: gray;
+  color: #696969;
+  font-weight: 100;
   margin-top: 5%;
 }
 
 #nutrition-img-div {
   height: fit-content;
+  background-color: white;
+}
+
+area {
+    cursor: pointer;
 }
