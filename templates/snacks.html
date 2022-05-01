@@ -3,6 +3,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'snacks.js') }}"></script>
 <script>
     let j = {{data|tojson}};
+    let page_num = {{cur_ind|tojson}};
 </script>
 <div class="container">
     <div class="row">
@@ -18,23 +19,27 @@
                     </li>
                     {%- endfor %}
                 </div>
-                <div>
+                <div class="hover-examples">
                     Examples:
-                    {% for p in data["hover_examples"] -%}
-                    <a> {{p |safe}} </a>
-                    {%- endfor %}
                 </div>
             </div>
         </div>
         <div class="col-md-6 col-sm-6">
-            <img src="{{data['image_link']}}" id="snack-images" class="image-container">
+            <div class="row">
+                <div class="col-md-6 snack-image">
+                    <img src="{{data['image_link']}}" id="snack-images" class="image-container">
+                </div>
+                <div class="col-md-6 nutrition-label">
+                    <img src="{{data['image_link']}}" id="snack-images" class="image-container">
+                </div>
+            </div>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-md-1 col-sm-1">
             <form action= "/snacks{{prev_link}}">
-                <button id="reset-btn" >Prev</button>
+                <button id="reset-btn" class="prev_button">Prev</button>
             </form>
         </div>
         
@@ -42,7 +47,7 @@
         </div>
         <div class="col-md-1 col-sm-1">
             <form action= "/snacks/{{next_link}}">
-                <button id="reset-btn"> Next </button>
+                <button id="reset-btn" class="next_button"> Next </button>
             </form>
         </div>
     </div>

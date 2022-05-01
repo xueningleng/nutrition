@@ -9,18 +9,18 @@
         "header": "Vegetable-Based Snacks",
         "image_link": "https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg",
         "descriptions": ["Nutritious option for your sweet tooth", "Natural sugars to fuel your body", "High in vitamins"],
-        "hover_examples": ["Fruits", "Raisins", "fruits bites", "Fruit Chips"]
+        "hover_examples": ["mini carrots", "crunch dried veggies"]
     },
     "2": {
         "header": "Fruit-Based Snacks",
         "image_link": "https://wexnermedical.osu.edu/-/media/images/wexnermedical/blog/2019-stories/01/washing-fruit-vegetables/washfruitveggies_large.jpg?la=en&hash=F77CC7B70509D2746B180CA9D7258DC6104CD1FE",
         "descriptions": ["Vegetables are low-calorie, low-fat, and naturally filling snacks", "High in fiber and potassium", "Help reduce your risk for various conditions."],
-        "hover_examples": ["Mini Carrots", "Crunch Dried Veggies","Dried Fruits"]
+        "hover_examples": ["fruits", "fruit bites","fruit chips"]
     },
     "3": {
         "header": "High-Fiber Snacks",
         "image_link": "https://i0.wp.com/nutritionstarringyou.com/wp-content/uploads/2020/03/High-Fiber-scaled.jpg?fit=400%2C600&ssl=1",
         "descriptions": ["Repair and build your body tissues, muscles, and bones", "Filling in small quantities", "High in fiber and potassium", "Help reduce your risk for various conditions."],
-        "hover_examples": ["oats with protein powder", "nuts", "oats bars", "protein bars"]
+        "hover_examples": ["oats with protein powder", "nuts", "oats bar", "protein bar"]
     }
 }

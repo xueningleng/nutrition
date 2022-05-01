@@ -450,3 +450,11 @@ button:disabled{
 #snack-images{
   padding-top: 30px;
 }
+
+.hover-snacks{
+  text-decoration: underline;
+}
+
+.disappear {
+  display: none;
+}
