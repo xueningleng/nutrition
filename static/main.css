@@ -335,11 +335,11 @@ button:disabled{
 }
 
 .image-container{
-  display: block;
-  width: 100%;
-  padding: 0;
-  max-height: 300px;
+  display: inline-block;
+  vertical-align: middle;
   overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
 
 #question-img{
@@ -438,6 +438,7 @@ button:disabled{
   color: var(--base);
   font-family: var(--textL);
   font-size: 24px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -457,4 +458,24 @@ button:disabled{
 
 .disappear {
   display: none;
+}
+
+.snack-headers {
+  font-size: 24px;
+  padding-bottom: 20px;
+  text-decoration: underline;
+  font-family: var(--textS);
+}
+
+.snack-link{
+  color: var(--base)
+}
+
+.hover-to-see{
+  color: hotpink;
+  font-family: var(--textS);
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 100;
 }

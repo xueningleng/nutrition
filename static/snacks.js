@@ -54,7 +54,6 @@ $(document).ready(function(){
     if (page_num == 3) {
         $(".next_button").addClass("disappear")
     }
-
    
     var build_examples = "Examples: "
     for (var i = 0; i < j["hover_examples"].length; i++) {

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'snacks.js') }}"></script>
+<script>
+    let j = {{data|tojson}};
+    let page_num = {{cur_ind|tojson}};
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-sm-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="header-snack-text">
+                        <span id="choose-text"> Choose </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 snack-headers">
+                    <a class="snack-link" href="./1"> Vegetable Based Snacks </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 snack-headers">
+                        <a class="snack-link" href="./2"> Fruit-Based Snacks </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 snack-headers">
+                        <a class="snack-link" href="./3"> High-Protein / Fiber Snacks </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1 col-sm-1">
+            <form action= "/snacks{{prev_link}}">
+                <button id="reset-btn" class="prev_button">Prev</button>
+            </form>
+        </div>
+        
+        <div class="col-md-10 col-sm-10">
+        </div>
+        <div class="col-md-1 col-sm-1">
+            <form action= "/snacks/{{next_link}}">
+                <button id="reset-btn" class="next_button"> Next </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
