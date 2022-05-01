@@ -1,6 +1,7 @@
 .nutrition-image {
     width: 100%;
-    margin: 20px;
+    margin: 120px;
+    background-color: white;
   }
 
 .hover
@@ -14,10 +15,13 @@
 }
 
 #description-text {
-  color: gray;
+  color: #696969;
+  font-weight: 100;
   margin-top: 5%;
 }
 
 #nutrition-img-div {
   height: fit-content;
+  background-color: white;
 }
+
