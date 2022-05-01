@@ -28,8 +28,7 @@ $(document).ready(function(){
         fillOpacity: 0.5,
         strokeColor: '5cb25d',
     });
-    $('.map').css('background-color','yellow')
-    
+
     let j = label_data
     var map_areas = ['#daily-value-rec', "#calories-rec", "#serving-info-rec", "#nutrients1-rec", "#nutrients2-rec"];
     $('#daily-value-rec').mouseout(function(){

@@ -12,11 +12,6 @@
     background-color: white;
   }
 
-.hover
-{
-    background-color:yellow;
-}  
-
 #hover-text {
     font-size: 20px;
     font-weight: bold;
@@ -37,8 +32,4 @@
 
 area {
     cursor: pointer;
-    background: lightgrey;
-}
-area:hover{
-    opacity: 0.8;
 }
