@@ -23,7 +23,7 @@ var label_data = {
 
 function revertDefault() {
     $('#description-text').html("");
-    $('#hover-text').html("Hover over something to learn about it");
+    $('#hover-text').html("Hover over the 9 sections to learn about them");
     $('#hover-text').removeClass("hover-text-title");
     $('#hover-text').addClass("hover-text-default");
 }
@@ -48,12 +48,16 @@ $(document).ready(function(){
     });
     revertDefault()
     var map_areas = ['#daily-value-rec', "#calories-rec", "#serving-info-rec", "#nutrients1-rec", "#nutrients2-rec"];
-    $('#daily-value-rec').mouseout(function(){
+
+    $('#serving-info-rec').mouseout(function(){
         revertDefault();
     })
-    $('#daily-value-rec').mouseover(function(){
-        setTitle("The Percent Daily Value")
-        display("4")
+    $('#serving-info-rec').mouseover(function(){
+        setTitle("1. Serving Information")
+        display("1")
+
+        // var s = '<div id="description-text">' +  j["1"]["descriptions"] + '</div>'
+        // $("#description-text").html(s);
     })
 
     $('#calories-rec').mouseout(function(){
@@ -61,29 +65,19 @@ $(document).ready(function(){
 
     })
     $('#calories-rec').mouseover(function(){
-        setTitle("Calories Information")
+        setTitle("2. Calories Information")
         display("2")
 
         // var s = '<div id="description-text">' + j["2"]["descriptions"] + '</div>'
         // $("#description-text").html(s);
     })
 
-    $('#serving-info-rec').mouseout(function(){
-        revertDefault();
-    })
-    $('#serving-info-rec').mouseover(function(){
-        setTitle("Serving Information")
-        display("1")
 
-        // var s = '<div id="description-text">' +  j["1"]["descriptions"] + '</div>'
-        // $("#description-text").html(s);
-    })
-    
     $('#nutrients1-rec-fat').mouseout(function(){
         revertDefault();
     })
     $('#nutrients1-rec-fat').mouseover(function(){
-        setTitle("Fat")
+        setTitle("3. Fat")
         let fat =
         '<h4>1 g fat = 9 cals</h4>' +
             '<ul type="disc">' +
@@ -108,11 +102,23 @@ $(document).ready(function(){
         $(".text-bold").css("color", "black");
     })
 
+    $('#nutrients1-rec-chol-sodium').mouseout(function(){
+        revertDefault();
+    })
+    $('#nutrients1-rec-chol-sodium').mouseover(function(){
+        setTitle("4. Cholesterol")
+        display("3")
+
+        // var carb = 'Protein<br>1 g protein = 4 cals <ul type="disc"><li>Found in beans peas, dairy products, meat, nuts seafood, whole grains and vegetables etc</li><li>Necessary for proper growth and development</li><li>Build and repairs body tissues</li><li>Important for many body processes</li><li>Nutrients to get more of: Protein</li></ul>'
+        // var s = '<div id="description-text">' +  carb + '</div>'
+        // $("#description-text").html(s);
+    })
+
     $('#nutrients1-rec-carb').mouseout(function(){
         revertDefault();
     })
     $('#nutrients1-rec-carb').mouseover(function(){
-        setTitle("Carb")
+        setTitle("5. Carb")
 
         let carb =
             '<h4>1 g carb = 4 cals</h4>' +
@@ -140,7 +146,7 @@ $(document).ready(function(){
         revertDefault();
     })
     $('#nutrients1-rec-protein').mouseover(function(){
-        setTitle("Protein")
+        setTitle("6. Protein")
         let protein =
         '<h4>1 g protein = 4 cals</h4>' +
             '<ul type="disc">' +
@@ -151,21 +157,11 @@ $(document).ready(function(){
         $("#description-text").html(protein);
     })
 
-    $('#nutrients1-rec-chol-sodium').mouseout(function(){
-        revertDefault();
-    })
-    $('#nutrients1-rec-chol-sodium').mouseover(function(){
-        display("3")
-
-        // var carb = 'Protein<br>1 g protein = 4 cals <ul type="disc"><li>Found in beans peas, dairy products, meat, nuts seafood, whole grains and vegetables etc</li><li>Necessary for proper growth and development</li><li>Build and repairs body tissues</li><li>Important for many body processes</li><li>Nutrients to get more of: Protein</li></ul>'
-        // var s = '<div id="description-text">' +  carb + '</div>'
-        // $("#description-text").html(s);
-    })
     $('#nutrients1-vit-min').mouseout(function(){
         revertDefault();
     })
     $('#nutrients1-vit-min').mouseover(function(){
-        setTitle("Vitamins and Minerals")
+        setTitle("7. Vitamins and Minerals")
         let vit_min =
             '<ul>' +
                 '<li>Diets rich in vitamins and minerals <span class="text-bold">promote growth, development, and normal body functioning</span></li>' +
@@ -177,8 +173,17 @@ $(document).ready(function(){
     $('#nutrients2-rec').mouseout(function(){
         revertDefault();
     })
+
+    $('#daily-value-rec').mouseout(function(){
+        revertDefault();
+    })
+    $('#daily-value-rec').mouseover(function(){
+        setTitle("8. The Percent Daily Value")
+        display("4")
+    })
+
     $('#nutrients2-rec').mouseover(function(){
-        setTitle("Nutrition Recommendation")
+        setTitle("9. Nutrition Recommendation")
         let nutrient_recs =
         '<ul>' +
             '<li>These numbers are your daily recommendations of how much each macro you should consume.</li>' +

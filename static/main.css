@@ -5,6 +5,7 @@
   --textL: 'Abril Fatface', cursive;
   --textS: 'Roboto Slab', serif;
 }
+
 body {
   font-family: 'Roboto Slab', serif;
   margin: 0;
@@ -14,7 +15,7 @@ body {
   display: block;
   font-size: 36px;
   font-family: var(--textL);
-  margin-top: 100px;
+  margin-top: 30vh;
   margin-left: 100px;
   position: absolute;
   color: var(--base);
@@ -41,7 +42,7 @@ body {
   display:flex;
   float: right;
   position: relative;
-  margin-top: 50px;
+  margin-top: 18vh;
   margin-right: -300px;
   margin-left: auto;
   width: 400px;
@@ -53,7 +54,7 @@ body {
   display:flex;
   float: right;
   position: relative;
-  margin-top: 80px;
+  margin-top: 22vh;
   margin-right: -450px;
   margin-left: auto;
   width: 400px;
@@ -73,7 +74,7 @@ body {
   position: relative;
   display:flex;
   float: right;
-  margin-top: 400px;
+  margin-top: 65vh;
   font-size: 24px;
   color: var(--base);
 }
@@ -94,11 +95,12 @@ button:hover{
 button:disabled{
   background-color: darkgrey;
 }
+
 #start-btn{
   position: relative;
   display:flex;
   float: right;
-  margin-top: 400px;
+  margin-top: 65vh;
 }
 
 #start-btn:hover{
@@ -335,11 +337,11 @@ button:disabled{
 }
 
 .image-container{
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  width: 100%;
+  padding: 0;
+  max-height: 300px;
   overflow: hidden;
-  max-width: 100%;
-  height: auto;
 }
 
 #question-img{
@@ -403,7 +405,7 @@ button:disabled{
 }
 
 .end-quiz-title{
-  margin-top: 150px;
+  margin-top: 25vh;
   font-size: 32px;
   color: var(--base);
   font-family: var(--textL);
@@ -500,6 +502,7 @@ button:disabled{
 #snack-home-image{
   padding-top: 0px;
 }
+
 .snack-image-container{
   display: inline-block;
   vertical-align: middle;
