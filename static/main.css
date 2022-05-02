@@ -511,3 +511,7 @@ button:disabled{
   height: auto;
   margin-bottom: 20px;
 }
+
+.snack-container {
+  height: 60vh;
+}

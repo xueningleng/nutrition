@@ -56,7 +56,12 @@ $(document).ready(function(){
         $(".prev_button").addClass("disappear")
     }
     if (page_num == 3) {
-        $(".next_button").addClass("disappear")
+        $("#next").html("");
+        let next_btn = "<form action= '/quiz'>" +
+                            "<button class='next_button'> Quiz </button>" +
+                        "</form>"
+        $("#next").html(next_btn);
+
     }
    
     let build_examples = "Examples: "
