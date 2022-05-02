@@ -114,8 +114,8 @@ quiz_questions = [
             "grams of fat, and 40 grams of carbs. " +
             "After this meal, how many effective calories are" +
             " actually burnt from her workout?",
-        'answers': [82, 95, 97, 100],
-        'correct': 95,
+        'answers': [82, 90, 97, 100],
+        'correct': 90,
         # 'image': "https://www.verywellfit.com/thmb/LOOS3DrPc3hC0ZaHMsd3GMfT-wI=/1500x1000/filters:fill(FFDB5D,1)/which-at-home-workout-options-are-right-for-you-5113667_static-4cfe40ec3ebe49a886353d25c4457886.png"
         'image': "https://static.onecms.io/wp-content/uploads/sites/35/2021/09/27/squat-GettyImages-1004449544-2000.jpg",
         'hints': "1g protein = 1g carb = 4 cals, 1g fat = 9 cals"
