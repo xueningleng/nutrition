@@ -497,10 +497,14 @@ button:disabled{
   padding-bottom: 10px;
 }
 
+#snack-home-image{
+  padding-top: 0px;
+}
 .snack-image-container{
   display: inline-block;
   vertical-align: middle;
   overflow: hidden;
   max-width: 100%;
   height: auto;
+  margin-bottom: 20px;
 }
