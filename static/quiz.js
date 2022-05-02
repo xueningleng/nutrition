@@ -250,6 +250,7 @@ $(document).ready(function(){
             $(next_btn).appendTo($('#q-container'));
 
         }
+        $('.reset-btn').prop('disabled', true);
     })
 
     $(document).on('click', ".hint-block", function(){
