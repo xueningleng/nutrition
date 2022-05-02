@@ -4,6 +4,9 @@
 <script>
     let j = {{data|tojson}};
     let page_num = {{cur_ind|tojson}};
+    let veggie_bg = "https://i.pinimg.com/originals/b4/da/cf/b4dacf838fc34d4f25532defb096a5cb.png"
+    let fruit_bg = "https://sweetphi.com/wp-content/uploads/2019/03/How-to-make-an-instagram-worthy-fruit-bowl-4.jpg"
+    let fiber_bg = "https://cravingsjournal.com/wp-content/uploads/2020/01/tabla-de-quesos-11.jpg"
 </script>
 <div class="section-title">
     Healthy Snack Choices
@@ -11,29 +14,23 @@
 
 <div class="container">
     <div class="row snack-container">
-        <div class="col-md-6 col-sm-6">
-            <div class="row">
-                <div class="col-md-12 snack-headers">
-                    <a class="snack-link" href="./1"> Vegetable Based Snacks </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 snack-headers">
-                        <a class="snack-link" href="./2"> Fruit-Based Snacks </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 snack-headers">
-                        <a class="snack-link" href="./3"> High-Protein / Fiber Snacks </a>
-                </div>
-            </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 snack-headers">
+            <a class="snack-link" href="./1"
+               style="background-image: url('https://i.pinimg.com/originals/b4/da/cf/b4dacf838fc34d4f25532defb096a5cb.png');"> Vegetable Based </a>
         </div>
 
-        <div class="col-md-6">
-            <img src="https://i.dailymail.co.uk/i/newpix/2018/08/13/18/4F119E1C00000578-0-image-a-32_1534181981316.jpg" id="snack-home-image" class="snack-image-container">
+        <div class="col-lg-4 col-md-4 col-sm-4 snack-headers">
+            <a class="snack-link" href="./2"
+               style="background-image: url('https://sweetphi.com/wp-content/uploads/2019/03/How-to-make-an-instagram-worthy-fruit-bowl-4.jpg');"> Fruit-Based </a>
         </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 snack-headers">
+            <a class="snack-link" href="./3"
+                style="background-image: url('https://cravingsjournal.com/wp-content/uploads/2020/01/tabla-de-quesos-11.jpg')"> High-Protein / Fiber </a>
         </div>
+
     </div>
+
     <div class="row">
         <div class="col-md-1 col-sm-1">
             <form action= "/snacks{{prev_link}}">

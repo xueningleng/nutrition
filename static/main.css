@@ -462,9 +462,11 @@ button:disabled{
 #nutrition-label{
   padding-top: 30px;
 }
+
 .hover-examples{
   font-size: 16px;
 }
+
 .hover-snacks{
   color: var(--base) !important;
   text-decoration: underline !important;
@@ -484,13 +486,44 @@ button:disabled{
   color: var(--accent);
 }
 
-.snack-link{
+.fa-splotch{
   color: var(--accent);
 }
 
-.snack-link:hover{
-  color: darkgrey;
+.snack-link{
+  margin-top: 20px;
+  color: beige;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-clip: border-box;
+  transition: background-size 0.2s;
+  transition-timing-function: cubic-bezier(.07,1.41,.82,1.41);
+  box-shadow: 10px 5px 5px lightgrey;
+  line-height: 40vh;
+  font-family: var(--textL);
+  font-size: 24px;
+  text-align: center;
+  display: block;
+  width: 40vh;
+  height: 40vh;
+  cursor: pointer;
+  overflow: hidden;
+  white-space:nowrap;
 }
+
+.snack-link:hover{
+  color: var(--accent);
+  font-style: normal;
+  background-color: rgba(255,255,255,0.6);
+  background-blend-mode: lighten;
+  background-size: 350px;
+
+}
+
 .hover-to-see{
   color: darkgrey;
   font-family: var(--textS);
