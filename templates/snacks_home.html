@@ -5,16 +5,13 @@
     let j = {{data|tojson}};
     let page_num = {{cur_ind|tojson}};
 </script>
+<div class="section-title">
+    Healthy Snack Choices
+</div>
+
 <div class="container">
-    <div class="row">
+    <div class="row snack-container">
         <div class="col-md-6 col-sm-6">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="header-snack-text">
-                        <span id="section-title"> Healthy Snack Choices </span>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12 snack-headers">
                     <a class="snack-link" href="./1"> Vegetable Based Snacks </a>
@@ -37,14 +34,13 @@
         </div>
         </div>
     </div>
-    <br>
     <div class="row">
         <div class="col-md-1 col-sm-1">
             <form action= "/snacks{{prev_link}}">
                 <button id="reset-btn" class="prev_button">Prev</button>
             </form>
         </div>
-        
+
         <div class="col-md-10 col-sm-10">
         </div>
         <div class="col-md-1 col-sm-1">
@@ -53,6 +49,8 @@
             </form>
         </div>
     </div>
+
 </div>
+
 
 {% endblock %}

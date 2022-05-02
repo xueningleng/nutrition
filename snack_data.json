@@ -8,19 +8,19 @@
     "1": {
         "header": "Vegetable-Based Snacks",
         "image_link": "https://cdn.britannica.com/17/196817-050-6A15DAC3/vegetables.jpg",
-        "descriptions": ["Nutritious option for your sweet tooth", "Natural sugars to fuel your body", "High in vitamins"],
-        "hover_examples": ["mini carrots", "crunch dried veggies"]
+        "descriptions": ["Vegetables are low-calorie, low-fat, and naturally filling snacks", "High in fiber and potassium", "Help reduce your risk for various conditions."],
+        "hover_examples": ["Mini carrots", "Crunch dried veggies"]
     },
     "2": {
         "header": "Fruit-Based Snacks",
         "image_link": "https://s11727.pcdn.co/wp-content/uploads/2021/07/healthy-summer-snacks-to-make-in-a-pinch.png",
-        "descriptions": ["Vegetables are low-calorie, low-fat, and naturally filling snacks", "High in fiber and potassium", "Help reduce your risk for various conditions."],
-        "hover_examples": ["fruits", "fruit bites","fruit chips"]
+        "descriptions": ["Nutritious option for your sweet tooth", "Natural sugars to fuel your body", "High in vitamins"],
+        "hover_examples": ["Fruits", "Fruit bites","Fruit chips"]
     },
     "3": {
         "header": "High-Fiber Snacks",
         "image_link": "https://i0.wp.com/plantbasednews.org/wp-content/uploads/2020/09/fiber-scaled.jpg?fit=2560%2C1707&ssl=1",
         "descriptions": ["Repair and build your body tissues, muscles, and bones", "Filling in small quantities", "High in fiber and potassium", "Help reduce your risk for various conditions."],
-        "hover_examples": ["oats with protein powder", "nuts", "oats bar", "protein bar"]
+        "hover_examples": ["Oats with protein powder", "Nuts", "Oats bar", "Protein bar"]
     }
 }
